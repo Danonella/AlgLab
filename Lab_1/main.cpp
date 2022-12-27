@@ -33,6 +33,14 @@ SList *setToList(const bool *set) {
     return list;
 }
 
+void clearMemory(SList* basket) {
+    while (basket != nullptr) {
+        SList* elNext = basket -> next;
+        delete basket;
+        basket = elNext;
+    }
+}
+
 int main() {
     wcout << "\n\tTask: (A || B) \\ (C & D)\n";
 
@@ -172,7 +180,7 @@ int main() {
 
     clock_t arrEnd = clock();
 
-    wcout << endl << "\n\tArrayE = ";
+    wcout << "\n\tArrayE = ";
     for (int i = 0; i < j; i++) {
         wcout << arrayE[i];
     }
@@ -218,8 +226,6 @@ int main() {
         wcout << currList->el;
         currList = currList->next;
     }
-
-    wcout << endl;
 
     clock_t listStart = clock();
     for (int k = 0; k <= CONST; k++) {
@@ -269,72 +275,32 @@ int main() {
             }
         }
 
-        SList* basket = listAB;
-        while (basket != nullptr) {
-            SList* elNext = basket -> next;
-            delete basket;
-            basket = elNext;
-        }
+        clearMemory(listAB);
 
-        basket = listCD;
-        while (basket != nullptr) {
-            SList* elNext = basket -> next;
-            delete basket;
-            basket = elNext;
-        }
+        clearMemory(listCD);
 
         if (k != CONST) {
-            basket = listE;
-            while (basket != nullptr) {
-                SList *elNext = basket->next;
-                delete basket;
-                basket = elNext;
-            }
+            clearMemory(listE);
         }
     }
     clock_t listEnd = clock();
 
-    wcout << endl << "\tListE = ";
+    wcout << endl << "\n\tListE = ";
     currList = listE;
     while (currList != nullptr) {
         wcout << currList->el;
         currList = currList->next;
     }
 
-    SList* basket = listA;
-    while (basket != nullptr) {
-        SList* elNext = basket -> next;
-        delete basket;
-        basket = elNext;
-    }
+    clearMemory(listA);
 
-    basket = listB;
-    while (basket != nullptr) {
-        SList* elNext = basket -> next;
-        delete basket;
-        basket = elNext;
-    }
+    clearMemory(listB);
 
-    basket = listC;
-    while (basket != nullptr) {
-        SList* elNext = basket -> next;
-        delete basket;
-        basket = elNext;
-    }
+    clearMemory(listC);
 
-    basket = listD;
-    while (basket != nullptr) {
-        SList* elNext = basket -> next;
-        delete basket;
-        basket = elNext;
-    }
+    clearMemory(listD);
 
-    basket = listE;
-    while (basket != nullptr) {
-        SList* elNext = basket -> next;
-        delete basket;
-        basket = elNext;
-    }
+    clearMemory(listE);
 
     wcout << "\n\tTime List:\t" << (listEnd - listStart) / 1000.0 << endl;
 
