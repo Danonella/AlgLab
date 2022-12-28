@@ -5,7 +5,7 @@ using namespace std;
 class Bit {
 private:
     wchar_t alphabet[34] = L"абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-    int CONST = 10000;
+    int CONST = 1000000;
     clock_t bitStart, bitEnd;
     unsigned int bitA[33], bitB[33], bitC[33], bitD[33], bitE[33];
     bool *A, *B, *C, *D;

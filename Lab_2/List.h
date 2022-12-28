@@ -20,7 +20,7 @@ private:
     }
 
     wchar_t alphabet[34] = L"абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-    int CONST = 10000;
+    int CONST = 1000000;
     clock_t listStart, listEnd;
     bool *A, *B, *C, *D;
     SList *listA, *listB, *listC, *listD, *listCD, *listAB, *currList, *listE;

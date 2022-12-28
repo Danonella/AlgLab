@@ -5,7 +5,7 @@ using namespace std;
 class Array {
 private:
     wchar_t alphabet[34] = L"абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-    int CONST = 10000;
+    int CONST = 1000000;
     clock_t arrStart, arrEnd;
     int lenA = 0, lenB = 0, lenC = 0, lenD = 0, lenAB = 0, lenCD = 0;
     int check;

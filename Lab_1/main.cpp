@@ -3,7 +3,7 @@
 using namespace std;
 
 wchar_t alphabet[34] = L"абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-int CONST = 10000;
+int CONST = 1000000;
 
 bool *SetCreate() {
     bool *set = new bool[33];
@@ -399,9 +399,7 @@ int main() {
 
     clock_t wordStart = clock();
     for (int k = 0; k < CONST; k++) {
-        for (int i = 0; i < CONST; i++) {
-            wordE = ((wordA | wordB) | (wordC & wordD)) ^ (wordC & wordD);
-        }
+        wordE = ((wordA | wordB) | (wordC & wordD)) ^ (wordC & wordD);
     }
     clock_t wordEnd = clock();
 

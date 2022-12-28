@@ -20,7 +20,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e55c2212-7f97-46f8-8eac-c9b93e493cff" name="Changes" comment="" />
+    <list default="true" id="e55c2212-7f97-46f8-8eac-c9b93e493cff" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lab_2/Array.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/Array.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/Bit.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/Bit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/List.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/List.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/MachineWord.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/MachineWord.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/CMakeFiles/Lab_2.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/CMakeFiles/Lab_2.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/Lab_2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/Lab_2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +76,7 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/USER/Desktop/Bce/Programing/c++/alg_1",
+    "last_opened_file_path": "C:/Users/USER/Desktop/Bce/Programing/c++/alg_2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,11 +85,6 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="alg_1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="alg_1" TARGET_NAME="alg_1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="alg_1" RUN_TARGET_NAME="alg_1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -100,7 +106,10 @@
       <workItem from="1670869846353" duration="8000" />
       <workItem from="1671959524411" duration="6976000" />
       <workItem from="1672091746129" duration="353000" />
-      <workItem from="1672092819266" duration="7886000" />
+      <workItem from="1672092819266" duration="7999000" />
+      <workItem from="1672159807780" duration="1394000" />
+      <workItem from="1672171246476" duration="150000" />
+      <workItem from="1672225913717" duration="3900000" />
     </task>
     <servers />
   </component>

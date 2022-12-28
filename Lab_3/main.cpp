@@ -7,31 +7,31 @@
 using namespace std;
 
 class Node {
-    char d; // тег узла
-    Node *lft; // левый сын
-    Node *mdl; // средний сын
-    Node *rgt; // правый сын
+    char d;
+    Node *lft;
+    Node *mdl;
+    Node *rgt;
 public:
-    Node() : lft(nullptr), mdl(nullptr), rgt(nullptr) {} //конструктор узла
-    ~Node() { // деструктор узла
+    Node() : lft(nullptr), mdl(nullptr), rgt(nullptr) {}
+    ~Node() {
         if (lft) delete lft;
         if (mdl) delete mdl;
         if (rgt) delete rgt;
     }
 
-    friend class Tree; // дружественный класс дерево
+    friend class Tree;
 };
 
 class Tree {
-    Node *root;    // указатель на корень дерева
-    char num, maxNum;        //счётчик тегов и максимальный тег
-    int maxRow, offSet;        //максимальная глубина, смещение корня
-    char **screen;    // память для выдачи на экран
-    void clearMemory();    // очистка рабочей памяти
-    Node *makeNode(int depth);    // создание поддерева
-    void outNodes(Node *v, int r, int c); // выдача поддерева
-    Tree(const Tree &);    // фиктивный конструктор копии
-    Tree operator=(const Tree &) const = delete;    // присваивание
+    Node *root;
+    char num, maxNum;
+    int maxRow, offSet;
+    char **screen;
+    void clearMemory();
+    Node *makeNode(int depth);
+    void outNodes(Node *v, int r, int c);
+    Tree(const Tree &);
+    Tree operator=(const Tree &) const = delete;
 public:
     unordered_map<char, int> nodeParentsCount;
 
@@ -39,16 +39,16 @@ public:
 
     ~Tree();
 
-    void makeTree() {// ввод — генерация дерева
+    void makeTree() {
         root = makeNode(0);
     }
 
-    bool exist() { // проверка «дерево не пусто»
+    bool exist() {
         return root != nullptr;
     }
 
-    int bfs();    // обход «в ширину»
-    void outTree();    // выдача на экран
+    int bfs();
+    void outTree();
 };
 
 Tree::Tree(char nm, char mnm, int mxr) :
@@ -67,7 +67,7 @@ Node *Tree::makeNode(int depth) {
     cout << num << " " << Y << endl;
     if (Y) {    // создание узла, если Y = 1
         v = new Node;
-        v->d = num++;     // разметка в прямом порядке (= «в глубину»)
+        v->d = num++;
         v->lft = makeNode(depth + 1);
         v->mdl = makeNode(depth + 1);
         v->rgt = makeNode(depth + 1);
@@ -92,11 +92,11 @@ void Tree::clearMemory() {
 }
 
 void Tree::outNodes(Node *v, int r, int c) {
-    if (r && c && (c < 80)) screen[r - 1][c - 1] = v->d; // вывод метки
+    if (r && c && (c < 80)) screen[r - 1][c - 1] = v->d;
     if (r < maxRow) {
-        if (v->lft) outNodes(v->lft, r + 1, c - (offSet >> r)); //левый сын
-        if (v->mdl) outNodes(v->mdl, r + 1, c);    // средний сын
-        if (v->rgt) outNodes(v->rgt, r + 1, c + (offSet >> r)); //правый сын
+        if (v->lft) outNodes(v->lft, r + 1, c - (offSet >> r));
+        if (v->mdl) outNodes(v->mdl, r + 1, c);
+        if (v->rgt) outNodes(v->rgt, r + 1, c + (offSet >> r));
     }
 }
 
@@ -122,22 +122,22 @@ public:
 
 
 int Tree::bfs() {
-    const int maxQ = 100; //максимальный размер очереди
+    const int maxQ = 100;
     int count = 0;
     int current_depth = 0;
-    Queue<Node *> Q(maxQ);  //создание очереди указателей на узлы
-    Q.push(root); // Queue <- root поместить в очередь корень дерева
+    Queue<Node *> Q(maxQ);
+    Q.push(root);
     char lastIterDepthElement = root->d;
     Node *depthLastRightChild = root;
-    while (!Q.empty()) //пока очередь не пуста
+    while (!Q.empty())
     {
-        Node *v = Q.pop();// взять из очереди,
+        Node *v = Q.pop();
         cout << v->d << '_';
         nodeParentsCount[v->d] = current_depth;
-        count++; // выдать тег, счёт узлов
-        if (v->lft) Q.push(v->lft); // Queue <- (левый сын)
-        if (v->mdl) Q.push(v->mdl); // Queue <- (средний сын)
-        if (v->rgt) Q.push(v->rgt); // Queue <- (правый сын)
+        count++;
+        if (v->lft) Q.push(v->lft);
+        if (v->mdl) Q.push(v->mdl);
+        if (v->rgt) Q.push(v->rgt); 
 
         Node *tempLastChildren = (v->rgt) ? v->rgt : (v->mdl) ? v->mdl : (v->lft) ? v->lft : nullptr;
         if (tempLastChildren != nullptr) depthLastRightChild = tempLastChildren;

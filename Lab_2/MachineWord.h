@@ -5,7 +5,7 @@ using namespace std;
 class MachineWord {
 private:
     wchar_t alphabet[34] = L"абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-    int CONST = 10000;
+    int CONST = 1000000;
     clock_t wordStart, wordEnd;
     bool *A, *B, *C, *D;
     long long wordA = 0, wordB = 0, wordC = 0, wordD = 0, wordE = 0;
@@ -82,9 +82,7 @@ public:
 
         wordStart = clock();
         for (int k = 0; k < CONST; k++) {
-            for (int i = 0; i < CONST; i++) {
-                wordE = ((wordA | wordB) | (wordC & wordD)) ^ (wordC & wordD);
-            }
+            wordE = ((wordA | wordB) | (wordC & wordD)) ^ (wordC & wordD);
         }
         wordEnd = clock();
     }
