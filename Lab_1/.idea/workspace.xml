@@ -21,16 +21,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e55c2212-7f97-46f8-8eac-c9b93e493cff" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lab_2/Array.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/Array.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_2/Bit.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/Bit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_2/List.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/List.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_2/MachineWord.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/MachineWord.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/CMakeFiles/Lab_2.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/CMakeFiles/Lab_2.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/Lab_2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/Lab_2.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/CMakeFiles/Lab_3.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/CMakeFiles/Lab_3.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/Lab_3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/Lab_3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_3/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_3/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_3/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/CMakeFiles/Lab_4.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/CMakeFiles/Lab_4.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/CMakeFiles/Lab_4.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/CMakeFiles/Lab_4.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/Lab_4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/Lab_4.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/Lab_4.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/Lab_4.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/Lab_4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/Lab_4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4/cmake-build-debug-visual-studio/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +114,7 @@
       <workItem from="1672092819266" duration="7999000" />
       <workItem from="1672159807780" duration="1394000" />
       <workItem from="1672171246476" duration="150000" />
-      <workItem from="1672225913717" duration="3900000" />
+      <workItem from="1672225913717" duration="4592000" />
     </task>
     <servers />
   </component>

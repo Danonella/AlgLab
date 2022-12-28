@@ -6,6 +6,8 @@
 
 using namespace std;
 
+int choice;
+
 class Node {
     char d;
     Node *lft;
@@ -52,8 +54,8 @@ public:
 };
 
 Tree::Tree(char nm, char mnm, int mxr) :
-        num(nm), maxNum(mnm), maxRow(mxr), offSet(40), root(nullptr),
-        screen(new char *[maxRow]) { for (int i = 0; i < maxRow; ++i) screen[i] = new char[80]; }
+    num(nm), maxNum(mnm), maxRow(mxr), offSet(40), root(nullptr),
+    screen(new char *[maxRow]) { for (int i = 0; i < maxRow; ++i) screen[i] = new char[80]; }
 
 Tree::~Tree() {
     for (int i = 0; i < maxRow; ++i) delete[]screen[i];
@@ -63,9 +65,16 @@ Tree::~Tree() {
 
 Node *Tree::makeNode(int depth) {
     Node *v = nullptr;
-    int Y = (depth < rand() % 6 + 1) && (num <= 'z');
-    cout << num << " " << Y << endl;
-    if (Y) {    // создание узла, если Y = 1
+    int Y;
+
+    if (choice == 1) {
+        Y = (depth < rand() % 6 + 1) && (num <= 'z');
+    } else {
+        cout << "Node (" << num << ',' << depth << ")1/0:";
+        cin >> Y;
+    }
+
+    if (Y) {
         v = new Node;
         v->d = num++;
         v->lft = makeNode(depth + 1);
@@ -137,7 +146,7 @@ int Tree::bfs() {
         count++;
         if (v->lft) Q.push(v->lft);
         if (v->mdl) Q.push(v->mdl);
-        if (v->rgt) Q.push(v->rgt); 
+        if (v->rgt) Q.push(v->rgt);
 
         Node *tempLastChildren = (v->rgt) ? v->rgt : (v->mdl) ? v->mdl : (v->lft) ? v->lft : nullptr;
         if (tempLastChildren != nullptr) depthLastRightChild = tempLastChildren;
@@ -158,6 +167,10 @@ bool comp(pair<char, int> a, pair<char, int> b) {
 }
 
 int main() {
+    cout << "Choose the type of data entry:\n";
+    cout << "1. Generation\n2. Manual input\n";
+    cin >> choice;
+
     int n = 0;
     Tree tree('a', 'z', 8);
     srand(time(nullptr));

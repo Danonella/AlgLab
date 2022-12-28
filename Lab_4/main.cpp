@@ -100,10 +100,7 @@ bool Graph::isVisited(const vector<bool> &visited) {
 
 // Алгоритм Косарайю
 bool Graph::isSC(int n) {
-    // отслеживаем все ранее посещенные вершины
     vector<bool> visited(n);
-
-    // находим первую вершину `i` с ненулевой степенью и запускаем из нее DFS
     int i;
     for (i = 0; i < n; i++) {
         if (adjList[i].size()) {
@@ -112,23 +109,14 @@ bool Graph::isSC(int n) {
         }
     }
 
-    // вернуть false, если DFS не смог посетить все вершины с ненулевой степенью
     if (!isVisited(visited)) {
         return false;
     }
 
-    // сбросить посещенный массив
     fill(visited.begin(), visited.end(), false);
-
-    // создаем транспонирование Graphа
     Graph g = buildTranspose(n);
-
-    // выполнить поиск в глубину на транспонированном Graph, используя ту же начальную вершину, что и
-    // использовано в предыдущем вызове DFS
     DFS(i, visited);
 
-    // вернуть true, если второй поиск в глубину также исследовал все вершины с ненулевой степенью;
-    // false иначе
     return isVisited(visited);
 }
 
@@ -147,18 +135,14 @@ bool Graph::hasEulerianCycle(int n) {
 void Graph::buildEulerianCycle(int vertex, int edges) {
     vector<int> vertexOfEulerianCycle(edges + 1);
     stack<int> S;
-    for (int i = 0; i < in.size(); ++i) {
-        if (in[i] % 2 == 1) {
-            vertex = i;
-            break;
-        }
-    }
     S.push(vertex);
     vector<vector<int>> gr = getMatrix(size);
     int i = 0;
+
     while (!S.empty()) {
         int w = S.top();
         bool fe = false;
+
         for (int u = 0; u < in.size(); ++u) {
             if (gr[w][u] != 0) {
                 S.push(u);
@@ -167,6 +151,7 @@ void Graph::buildEulerianCycle(int vertex, int edges) {
                 break;
             }
         }
+
         if (!fe) {
             S.pop();
             vertexOfEulerianCycle[i] = w;
@@ -180,9 +165,9 @@ void Graph::buildEulerianCycle(int vertex, int edges) {
     }
 }
 
+// Генерация графов
 vector<Edge> generateTests(int countVertex, int countEdges) {
     vector<Edge> edges;
-    cout << countEdges << endl;
     int a, b;
 
     while (edges.size() < countEdges) {
@@ -217,9 +202,11 @@ int main() {
 
     if (choice == 1) {
         countVertex = rand() % 10 + 2;
+        cout << "Number of vertex:\n" << countVertex;
         maxCountEdges = (countVertex * (countVertex - 1)) / 2;
         countEdges = rand() % maxCountEdges + 1;
-        cout << countVertex << endl;
+        cout << "\nNumber of edges:\n" << countEdges;
+        cout << "\nGraph:\n";
         edges = generateTests(countVertex, countEdges);
     } else {
         cout << "Enter number of vertex:\n";
